@@ -11,9 +11,9 @@
       upgrade: dist
     when: ansible_distribution == "Ubuntu"
 
-- hosts: Ubuntu
+- hosts: all
   become: true
   roles:
-    - role: keystone
     - role: glance
+    - role: keystone
     - role: nova
